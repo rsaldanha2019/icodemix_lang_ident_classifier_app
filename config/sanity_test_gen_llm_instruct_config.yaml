@@ -2,7 +2,7 @@ operation_mode:
   "model_hyperparameter_selection"
 app:
   model_config_name:
-    "lang_ident_classifier_optim_sanity_test_llama1b_instruct"
+    "lang_ident_classifier_optim_sanity_test_gen_llm_instruct"
   data_dir:
     "data"
   logs_dir:
