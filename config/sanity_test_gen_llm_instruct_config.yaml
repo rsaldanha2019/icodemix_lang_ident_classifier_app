@@ -36,6 +36,10 @@ run_config:
   alpha: [0.25, 0.5, 0.75, 0.8, 0.9]
   gamma: [0.0, 0.5, 1.0, 2.0, 5.0]
   loss_type:
+    - class_weighted_balanced_imbalance_loss
+    - cross_entropy_loss  
+    - class_weighted_cross_entropy_loss
+    - focal_loss
     - class_weighted_focal_loss_with_adaptive_focus_type1
     - class_weighted_focal_loss_with_adaptive_focus_type2
     - class_weighted_focal_loss_with_adaptive_focus_type3
