@@ -2,7 +2,7 @@ operation_mode:
   "process_bhasha_dataset"
 app:
   model_config_name:
-    "process_dataset"
+    "process_bhasha_dataset"
   data_dir:
     "data"
   logs_dir:
@@ -27,10 +27,6 @@ dataset:
   select_languages:
     ['English','Hindi','Kannada','Telugu', 'Tamil', 'Malayalam']
   dataset_share:
-    0.1
-  train_dataset_sample_share:
-    0.01
-  val_dataset_sample_share:
     0.01
   files_have_header:
     True
@@ -43,9 +39,3 @@ dataset:
   test:
     data_dir:
       "test"
-model:
-  finetune_status:
-    False
-  max_epochs:
-    5 
-

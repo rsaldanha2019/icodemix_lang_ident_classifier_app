@@ -1,0 +1,11 @@
+pyproject.toml
+src/icodemix_lang_ident_classifier_app/__init__.py
+src/icodemix_lang_ident_classifier_app.egg-info/PKG-INFO
+src/icodemix_lang_ident_classifier_app.egg-info/SOURCES.txt
+src/icodemix_lang_ident_classifier_app.egg-info/dependency_links.txt
+src/icodemix_lang_ident_classifier_app.egg-info/top_level.txt
+src/icodemix_lang_ident_classifier_app/cli/__init__.py
+src/icodemix_lang_ident_classifier_app/cli/main.py
+src/icodemix_lang_ident_classifier_app/data_ops/__init__.py
+src/icodemix_lang_ident_classifier_app/model_ops/__init__.py
+src/icodemix_lang_ident_classifier_app/model_ops/model_ops_api.py
