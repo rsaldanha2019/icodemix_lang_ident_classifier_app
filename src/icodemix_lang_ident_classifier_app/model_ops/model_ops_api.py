@@ -4,7 +4,10 @@ from datetime import timedelta
 import json
 import os
 import random
-import resource
+try:
+    import resource
+except ImportError:
+    pass # leave for Windows and other OS
 import sys
 import time
 from typing import Any
