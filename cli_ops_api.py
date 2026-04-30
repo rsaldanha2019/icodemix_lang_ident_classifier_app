@@ -4,6 +4,7 @@ from pathlib import Path
 from icodemix_lang_ident_classifier.language.utils.property_utils import PropertyUtils
 from icodemix_lang_ident_classifier.language.utils.log_utils import LogUtils
 
+
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "src"
 
@@ -100,7 +101,7 @@ class LangIdentJobRunner:
         # Operation selection
         self.operation = self.prompt_choice_pt(
             "Choose operation (Press Tab Key to View Options)",
-            ["process_bhasha_dataset", "model_hyperparameter_optimization"],
+            ["process_bhasha_dataset", "model_hyperparameter_optimization", "model_train", "model_test"],
             default="process_bhasha_dataset"
         )
 
@@ -184,11 +185,11 @@ class LangIdentJobRunner:
         if self.operation == "process_bhasha_dataset":
             return [
                 "python", "-u",
-                "-m", "icodemix_lang_ident_classifier_app.cli.main",
+                "-m", "icodemix_lang_ident_classifier_app.data_ops.data_ops_api",
                 f"--config_file_path={config_path}",
                 f"--operation_mode={self.operation}",
             ]
-        else:
+        elif self.operation == "model_hyperparameter_optimization":
             cmd = [
                 "python", "-u", "-m", "torch.distributed.run",
                 f"--nproc-per-node={self.ppn}",
